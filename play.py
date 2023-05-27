@@ -43,13 +43,12 @@ def save_config():
 def load_config():
     try:
         f = open('helper_config.txt', 'r')
-        tempString = f.read()
         selectedModules = f.read()
-        var1.set(int('classify' in tempString))
-        var2.set(int('summarize' in tempString))
-        var3.set(int('caption' in tempString))
-        var4.set(int('keywords' in tempString))
-        var5.set(int('prompt' in tempString))
+        var1.set(int('classify' in selectedModules))
+        var2.set(int('summarize' in selectedModules))
+        var3.set(int('caption' in selectedModules))
+        var4.set(int('keywords' in selectedModules))
+        var5.set(int('prompt' in selectedModules))
         print_selection()
     except:
         print('File does not exist.')
