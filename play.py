@@ -17,7 +17,6 @@ def print_selection():
     global selectedModules
     selectedModules = ''
     if (var1.get() == 1):
-        #label.config(text='Module: Classify enabled.')
         selectedModules += 'classify, '
     if (var2.get() == 1):
         selectedModules += 'summarize, '
